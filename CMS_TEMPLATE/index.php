@@ -22,9 +22,7 @@ include "includes/navigation.php";
              $post_date=$row['post_date'];
              $post_image=$row['post_image'];
              $post_content=$row['post_content'];
-             $post_tags=$row['post_tags'];
-             $post_comment_count=$row['post_comment_count'];
-             $post_status=$row['post_status'];
+            
             }
             ?>
 
@@ -45,7 +43,7 @@ include "includes/navigation.php";
                 <p class="lead">
                     by <a href="index.php">Start Bootstrap</a>
                 </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on February 09, 2021 at 10:51 AM</p>
                 <hr>
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
                 <hr>
