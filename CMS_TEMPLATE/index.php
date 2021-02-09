@@ -4,9 +4,6 @@ include "includes/header.php";
 include "includes/navigation.php";
 
 ?>
-
-   
-
     <!-- Page Content -->
     <div class="container">
 
@@ -22,12 +19,13 @@ include "includes/navigation.php";
             {
              $post_title=   $row['post_title'];
              $post_author= $row['post_author'];
-            
-            
+             $post_date=$row['post_date'];
+             $post_image=$row['post_image'];
+             $post_content=$row['post_content'];
+             $post_tags=$row['post_tags'];
+             $post_comment_count=$row['post_comment_count'];
+             $post_status=$row['post_status'];
             }
-
-
-
             ?>
 
 
