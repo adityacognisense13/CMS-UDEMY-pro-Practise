@@ -52,13 +52,7 @@ include "includes/navigation.php";
 
 <?php           
   }
-            
             ?>
-               
-
-               
-            
-
                 <!-- Pager -->
                 <?php
                 include "includes/pager.php";

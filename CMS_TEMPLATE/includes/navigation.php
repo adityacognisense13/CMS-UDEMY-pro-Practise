@@ -33,12 +33,10 @@
                 
                  echo "<li><a href='#'>{$cat_title}</li>"; 
                 }
-
-                ?>
-                    
-                    <li>
-                        <a href="admin">Admin</a>
-                    </li>
+                ?> 
+                       <li>
+                <a href="admin">Admin</a>
+            </li>
                     <!--
                     <li>
                         <a href="#">Services</a>
