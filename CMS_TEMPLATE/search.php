@@ -76,10 +76,6 @@ if(isset($_POST['submit']))
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            
-
- 
-           
         <!-- /.row -->
 
         <hr>

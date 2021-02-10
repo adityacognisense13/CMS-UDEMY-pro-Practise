@@ -9,9 +9,6 @@
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
 
-
-          
-
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,15 +30,16 @@
                 while($row = mysqli_fetch_assoc($select_all_categories_query))
                 {
                  $cat_title=   $row['cat_title'];
-                // echo "<li>{$cat_title}</li>";
-                 echo "<li><a href='#'>{$cat_title}</li>";
+                
+                 echo "<li><a href='#'>{$cat_title}</li>"; 
                 }
 
                 ?>
-                    <!--
+                    
                     <li>
-                        <a href="#">About</a>
+                        <a href="admin">Admin</a>
                     </li>
+                    <!--
                     <li>
                         <a href="#">Services</a>
                     </li>
