@@ -69,7 +69,7 @@
                         </ul>
                     </li>
                     <li class="">
-                        <a href="blank-page.html"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
+                        <a href="blank-page.html"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
                 </ul>
             </div>
