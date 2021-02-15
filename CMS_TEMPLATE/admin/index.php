@@ -1,17 +1,21 @@
 <?php
-    include "includes/header.php";
+ include "../includes/db.php";
+ include "includes/header.php"
+
+
 ?>
 
     <div id="wrapper">
+
+    
 
        <?php
 
                 include "includes/navigation.php";
 
-
-
        ?>
-
+       
+ 
         <div id="page-wrapper">
 
             <div class="container-fluid">
