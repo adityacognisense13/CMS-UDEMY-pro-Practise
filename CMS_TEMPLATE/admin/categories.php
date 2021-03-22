@@ -56,17 +56,15 @@
                             </div>
                         </form>
 
-                            <!-- Edit categories -->
+                                <?php
+                                        if(isset($_GET['edit']))
+                                        {
+                                            $cat_id = $_GET['edit'];
 
-                            <form action="" method="POST">
-                            <div class="form-group">
-                                <label for="cat-title">Edit Category</label>
-                                <input type="text" class="form-control" name="cat_title">
-                            </div>
-                            <div class="form-group">
-                                <input class="btn btn-primary" type="submit" name="submit" value="Edit Categories">
-                            </div>
-                        </form>
+                                            include "includes/admin_edit_categories.php";
+                                        }
+                                ?> 
+                           
 
 
 
@@ -79,7 +77,7 @@
                         <!-- Displaying the data and creating the php tags -->
                     
 
-                        <!-- Creation of table-->
+                        <!-- Creation of table--> 
 
 
                         <table class="table table-bordered table-hover">
@@ -106,13 +104,13 @@
                                      echo "<td> {$cat_id}</td>";
                                      echo "<td> {$cat_title}</td>";
                                      echo "<td><a href='categories.php?delete={$cat_id}'>Delete</a></td>";
-                                    
+                                     echo "<td><a href='categories.php?edit={$cat_id}'>Edit</a></td>";
                                      echo "</tr>";
                                  } 
                                  ?>
 
 
-                                 <?php
+                                 <?php 
 
                                  if(isset($_GET['delete']))
                                  {
@@ -142,4 +140,4 @@
 
     <?php
         include "includes/admin_footer.php";
-   ?>
+   ?> 
