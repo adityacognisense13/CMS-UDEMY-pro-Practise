@@ -34,20 +34,29 @@
                                         <th>Date</th>
                                     </tr>
                                 </thead>
-                            </table>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <tbody>
+                                
+
+
+                        <?php
+
+                            postsDisplay();
+
+                            ?>
+
+                                    <td>10</td>
+                                    <td>Aditya Machiraju</td>
+                                    <td>BootStrap FrameWork</td>
+                                    <td>Bootstrap</td>
+                                    <td>Status</td>
+                                    <td>Image</td>
+                                    <td>Tags</td>
+                                    <td>Comments</td>
+                                    <td>Date</td>
+                               
                             </tbody>
+                            </table>
+                            
 
 
                 </div>

@@ -61,7 +61,7 @@ if(isset($_POST['submit']))
                 <p><span class="glyphicon glyphicon-time"></span><?php
                     echo $post_date ?></p>
                 <hr>
-                <img class="img-responsive" src="images/image_1.jpg" alt="">
+                <img class="img-responsive" src="images/image_2.png" alt="">
                 <hr>
                 <p><?php
                     echo $post_content ?></p>

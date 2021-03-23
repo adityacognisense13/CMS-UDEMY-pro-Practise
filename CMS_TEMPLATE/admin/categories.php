@@ -27,7 +27,7 @@
 
                  insert_categories();
 
-        ?>
+                ?>
 
 
 
