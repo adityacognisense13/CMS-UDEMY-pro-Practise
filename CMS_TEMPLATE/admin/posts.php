@@ -20,42 +20,38 @@
                         Welcome to Admin Page
                         <!--<small>Aditya</small>-->
                     </h1>
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Author</th>
-                                        <th>Title</th>
-                                        <th>Category</th>
-                                        <th>Status</th>
-                                        <th>Image</th>
-                                        <th>Tags</th>
-                                        <th>Comments</th>
-                                        <th>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                
 
 
-                        <?php
+                     <?php
 
-                            postsDisplay();
+                     if(isset($_GET['source']))
+                     {
+                         $source = $_GET['source'];
+                     }
+                     else{
+                         $source='';
+                     }
 
-                            ?>
+                    switch($source) 
+                    {
+                        case '1';
+                        echo "Welcome";
+                        break;
 
-                                    <td>10</td>
-                                    <td>Aditya Machiraju</td>
-                                    <td>BootStrap FrameWork</td>
-                                    <td>Bootstrap</td>
-                                    <td>Status</td>
-                                    <td>Image</td>
-                                    <td>Tags</td>
-                                    <td>Comments</td>
-                                    <td>Date</td>
-                               
-                            </tbody>
-                            </table>
+                        case '2';
+                        echo "Hello";
+                        break;
+
+                        default :
+
+                        include "includes/view_all_posts.php";
+
+                        break;
+                    }
+
+
+
+                    ?>
                             
 
 

@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
    $count=mysqli_num_rows($search_query);
    if($count==0)
    {
-       echo "<h1>No result</h1>"; 
+       echo "<h1>OOops Please go back </h1>"; 
    }
    else{
     $query="SELECT * FROM posts";
