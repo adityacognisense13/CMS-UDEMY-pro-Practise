@@ -3,9 +3,11 @@
 if(isset($_POST['create_post']))
 {
     $post_title=$_POST['title'];
-    $post_author=$_POST['post_author'];
     $post_category_id=$_POST['post_category_id'];
+    $post_author=$_POST['post_author'];
     $post_status=$_POST['post_status'];
+
+     
     $post_image=$_FILES[' post_image']['name'];
     $post_image_temp = $_FILES['post_image']['tmp_name'];
 
@@ -15,6 +17,12 @@ if(isset($_POST['create_post']))
     $post_comment_count=4;
 
         move_uploaded_file($post_image_temp,"../images/$post_image");
+
+         $query="INSERT INTO posts(posts_category_id,post_title,post_author,post_date,post_image,post_content,
+        post_tags,post_comment_count,post_status)";
+        $query .="VALUES('{ $post_title}',{$post_category_id},'{ $post_author}',now(),'{$post_status}','{$post_image}','{ $post_tags}','{ $post_content}')";
+
+
 
 }
 ?>
@@ -45,7 +53,7 @@ if(isset($_POST['create_post']))
             </div>
 
             <div class="form-group">
-            <label for="post_image">Post Images</label>
+            <label for="post_image">Post Image</label>
             <input type="file"  name=" post_image">
             </div>
 
