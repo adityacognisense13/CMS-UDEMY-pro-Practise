@@ -102,4 +102,45 @@ $select_posts = mysqli_query($connection,$query);
                             }
 }
 
+
+function insertPosts()
+{
+
+    global $connection;
+
+    if(isset($_POST['create_post']))
+{
+    $post_title=$_POST['post_title'];
+    $posts_category_id=$_POST['posts_category_id'];
+    $post_author=$_POST['post_author'];
+    $post_status=$_POST['post_status'];
+
+     
+    $post_image=$_FILES[' post_image']['name'];
+    $post_image_temp = $_FILES['post_image']['tmp_name'];
+
+    $post_tags=$_POST['post_tags'];
+    $post_content=$_POST['post_content'];
+    $post_date=date('d-m-y');
+    //$post_comment_count=4;
+
+       // move_uploaded_file($post_image_temp,"../images/$post_image");
+
+ $query="INSERT INTO posts(post_title,posts_category_id,post_author,post_status,post_image,post_content,post_date,post_tags)";
+
+$query .="VALUES('{$post_title}',{$posts_category_id},'{$post_author}','{$post_status}','{$post_image}','{$post_content}',now(),'{ $post_tags}')";
+
+        
+        $create_post_query=mysqli_query($connection,$query);
+        if(!$create_post_query)
+        {
+            die('Query Failed' .mysqli_error($connection));
+        }
+
+
+
+
+}
+}
+
 ?>
