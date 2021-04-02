@@ -34,3 +34,13 @@
                                
                             </tbody>
                             </table>
+
+
+
+<?php
+
+
+if(isset($_GET['delete']))
+{
+    echo "Trying to delete please add the code";
+}

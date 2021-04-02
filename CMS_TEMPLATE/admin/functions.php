@@ -97,6 +97,7 @@ $select_posts = mysqli_query($connection,$query);
                             echo "<td>{$post_tags}</td>";
                             echo "<td>{$post_comment_count}</td>";
                             echo "<td>{$post_date}</td>";
+                            echo"<td><a href='posts.php?delete={$posts_id}'>Delete</a></td>";
 
                             echo "</tr>";
                             }
