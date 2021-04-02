@@ -116,8 +116,8 @@ function insertPosts()
     $post_status=$_POST['post_status'];
 
      
-    $post_image=$_FILES[' post_image']['name'];
-    $post_image_temp = $_FILES['post_image']['tmp_name'];
+    //$post_image=$_FILES[' post_image']['name'];  
+    //$post_image_temp = $_FILES['post_image']['tmp_name'];
 
     $post_tags=$_POST['post_tags'];
     $post_content=$_POST['post_content'];
@@ -126,9 +126,9 @@ function insertPosts()
 
        // move_uploaded_file($post_image_temp,"../images/$post_image");
 
- $query="INSERT INTO posts(post_title,posts_category_id,post_author,post_status,post_image,post_content,post_date,post_tags)";
+ $query="INSERT INTO posts(post_title,posts_category_id,post_author,post_status,post_content,post_date,post_tags)";
 
-$query .="VALUES('{$post_title}',{$posts_category_id},'{$post_author}','{$post_status}','{$post_image}','{$post_content}',now(),'{ $post_tags}')";
+$query .="VALUES('{$post_title}',{$posts_category_id},'{$post_author}','{$post_status}','{$post_content}',now(),'{ $post_tags}')";
 
         
         $create_post_query=mysqli_query($connection,$query);

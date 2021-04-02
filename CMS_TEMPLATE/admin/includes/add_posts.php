@@ -30,13 +30,13 @@ insertPosts();
             <input type="text" class="form-control" name="post_status">
             </div>
 
-               <div class="form-group">
+<!--            <div class="form-group">
             <label for="post_image">Post Image</label>
             <input type="file"  name=" post_image">
             </div>
+-->
 
-
-            <div class="form-group">
+            <div class="form-group"> 
             <label for="post_tags">Post Tags</label>
             <input type="text" class="form-control" name="post_tags">
             </div>
