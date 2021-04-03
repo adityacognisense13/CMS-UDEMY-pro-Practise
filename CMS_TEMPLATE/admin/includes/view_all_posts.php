@@ -10,6 +10,7 @@
                                         <th>Tags</th>
                                         <th>Comments</th>
                                         <th>Date</th>
+                                        <th>Modifications</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -22,7 +23,7 @@
 
                             ?>
 
-                                    <td>10</td>
+                                  <!--  <td>10</td>
                                     <td>Aditya Machiraju</td>
                                     <td>BootStrap FrameWork</td>
                                     <td>Bootstrap</td>
@@ -30,7 +31,7 @@
                                     <td>Image</td>
                                     <td>Tags</td>
                                     <td>Comments</td>
-                                    <td>Date</td>
+                                    <td>Date</td>-->
                                
                             </tbody>
                             </table>
@@ -39,8 +40,6 @@
 
 <?php
 
+deletePosts()
 
-if(isset($_GET['delete']))
-{
-    echo "Trying to delete please add the code";
-}
+?>

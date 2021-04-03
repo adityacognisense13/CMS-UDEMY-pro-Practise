@@ -144,4 +144,22 @@ $query .="VALUES('{$post_title}',{$posts_category_id},'{$post_author}','{$post_s
 }
 }
 
+
+
+function deletePosts()
+{
+    global $connection;
+    if(isset($_GET['delete']))
+{
+    {
+        $the_post_id= $_GET['delete'];
+
+        $query = "DELETE FROM posts WHERE posts_id = {$the_post_id}";
+        $delete_query = mysqli_query($connection,$query);
+        header("Location:posts.php");
+     }
+}
+}
+
+
 ?>
