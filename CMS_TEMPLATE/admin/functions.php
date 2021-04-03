@@ -1,6 +1,6 @@
 <?php
 
-
+//////////Insertion Of Categories//////////////
 function insert_categories()
 {
 
@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
     }
 }
 }
-
+//display of Categories///////////
 function findAllCategories()
 {
 
@@ -49,7 +49,7 @@ echo "</tr>";
 
 }
 
-
+////////////Delete Categories/////////////
 function deleteCategories()
 {
 
@@ -103,7 +103,7 @@ $select_posts = mysqli_query($connection,$query);
                             }
 }
 
-
+////////Insertion Of Posts///////////
 function insertPosts()
 {
 
@@ -145,7 +145,7 @@ $query .="VALUES('{$post_title}',{$posts_category_id},'{$post_author}','{$post_s
 }
 
 
-
+/////////Deletion of Posts/////////////
 function deletePosts()
 {
     global $connection;
