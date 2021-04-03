@@ -5,7 +5,7 @@ if(isset($_GET['p_id']))
     $the_post_id = $_GET['p_id'];
 }
 
- $query = "SELECT * FROM posts";
+ $query = "SELECT * FROM posts where posts_id=  $the_post_id";
  $select_posts_by_id = mysqli_query($connection,$query);
  
                          while($row=mysqli_fetch_assoc($select_posts_by_id))
@@ -21,6 +21,37 @@ if(isset($_GET['p_id']))
                              $post_date=$row['post_date'];
                              $post_content=$row['post_content'];
                          }
+
+
+                         if(isset($_POST['update_post']))
+                         {
+                            
+                            $post_author=$_POST['post_author'];
+                            $post_status=$_POST['post_status'];
+                            
+
+                           $query="UPDATE posts SET post_author  = '{$post_author}' WHERE posts_id = {$the_post_id}";
+                            $query .="UPDATE posts SET post_status  = '{$post_status}' WHERE posts_id = {$the_post_id}";
+
+                                //$query="UPDATE posts SET";
+                               
+                                
+                                //$query .="post_author ='{$post_author}'";
+                               // $query .= "WHERE posts_id={$the_post_id}";
+                               
+
+                                
+                            $update_post = mysqli_query($connection,$query);
+
+                            
+
+                            if(!$update_post)
+                            {
+                                die("Query Failed ". mysqli_error($connection));
+                            }
+
+                         }
+
 ?>
 
 <form action="" method="post" enctype="multipart/form-data"> 
@@ -32,8 +63,26 @@ if(isset($_GET['p_id']))
 
 
             <div class="form-group">
-            <label for="posts_category_id">Post Category ID</label>
-            <input value="<?php echo $posts_category_id; ?>" type="text" class="form-control" name="posts_category_id">
+           <select name="post_category " id="post_category">
+           <?php
+            
+            $query="SELECT * FROM categories";
+            $select_categories=mysqli_query($connection,$query);
+
+            confirmQuery($select_categories);
+
+            while($row=mysqli_fetch_assoc($select_categories))
+            {
+                $cat_id=$row['cat_id'];
+                $cat_title=$row['cat_title'];
+
+                echo "<option value='{$cat_id}' >{$cat_title}</option>"; 
+             
+            } 
+             
+           ?>
+           
+           </select>
             </div>
 
 
@@ -62,17 +111,14 @@ if(isset($_GET['p_id']))
 
             <div class="form-group">
             <label for="post_content">Post Content</label>
-            <textarea  class="form-control" name="post_content" id="" cols="30" rows="10">
-
-            <?php echo $post_content; ?>
-
+            <textarea  class="form-control" name="post_content" id="" cols="30" rows="10"> <?php echo $post_content; ?>
             </textarea>
            
             </div>
 
 
             <div class="form-group">
-            <input class="btn btn-primary" type="submit" name="edit_post" value="Edit Post">
+            <input class="btn btn-primary" type="submit" name="update_post" value="update Post">
             </div>
 
 

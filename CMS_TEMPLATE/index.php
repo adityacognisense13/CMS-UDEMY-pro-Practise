@@ -26,8 +26,8 @@ include "includes/navigation.php";
              ?> 
 
 <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    Cognitech Blog
+                    <!--<small></small>-->
                 </h1>
 
                 <!-- First Blog Post -->
@@ -46,6 +46,7 @@ include "includes/navigation.php";
                 <hr>
                 <p><?php
                     echo $post_content ?></p>
+                  
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
