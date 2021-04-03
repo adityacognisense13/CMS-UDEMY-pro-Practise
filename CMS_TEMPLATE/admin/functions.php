@@ -97,6 +97,7 @@ $select_posts = mysqli_query($connection,$query);
                             echo "<td>{$post_tags}</td>";
                             echo "<td>{$post_comment_count}</td>";
                             echo "<td>{$post_date}</td>";
+                            echo"<td><a href='posts.php?source=edit_posts&p_id={$posts_id}'>Edit</a></td>";
                             echo"<td><a href='posts.php?delete={$posts_id}'>Delete</a></td>";
 
                             echo "</tr>";
@@ -160,6 +161,6 @@ function deletePosts()
      }
 }
 }
-
-
 ?>
+<!--------------------------------------------------------------------- ------------------------------------------------------------------->
+

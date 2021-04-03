@@ -38,8 +38,8 @@
                         include "includes/add_posts.php";
                         break;
 
-                        case '2';
-                        echo "Hello";
+                        case 'edit_posts';
+                        include "includes/edit_posts.php";
                         break;
 
                         default :
