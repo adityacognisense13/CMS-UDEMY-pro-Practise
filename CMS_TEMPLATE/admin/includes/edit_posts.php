@@ -29,22 +29,30 @@ if(isset($_GET['p_id']))
                             $post_author=$_POST['post_author'];
                             $post_status=$_POST['post_status'];
                             
-                            $post_title=$_POST['post_title'];
+                            //$post_title=$_POST['post_title'];
                            // $posts_category_id=$_POST['posts_category_id'];
                             //$post_image=$_POST['post_image'];
-                            $post_tags=$_POST['post_tags'];
+                           $post_tags=$_POST['post_tags'];
                             //$post_comment_count=$_POST['post_comment_count'];
                            //$post_date=$_POST['post_date'];
-                            $post_content=$_POST['post_content'];
+                            //$post_content=$_POST['post_content'];
+
+                            $query ="UPDATE posts SET post_author='$post_author' where posts_id=$the_post_id";
+                            $query ="UPDATE posts SET post_status='$post_status' where posts_id=$the_post_id";
+                            //$query ="UPDATE posts SET post_title='$post_title' where posts_id=$the_post_id";
+                            $query ="UPDATE posts SET post_tags =' $post_tags' where posts_id=$the_post_id";
+
+
+
+
+
+                           
                             
 
-                           $query="UPDATE posts SET post_author  = '$post_author', post_status = '$post_status', post_title = '$post_title', post_tags = $post_tags,   post_content = '$post_content'  WHERE posts_id = {$the_post_id}";
+                           //$query="UPDATE posts SET post_author  = '$post_author', post_status = '$post_status', post_title = '$post_title', 
+                           //post_tags = $post_tags  WHERE posts_id = {$the_post_id}";
 
-                                //$query="UPDATE posts SET";
-                               
                                 
-                                //$query .="post_author ='{$post_author}'";
-                               // $query .= "WHERE posts_id={$the_post_id}";
                                
 
                                 
