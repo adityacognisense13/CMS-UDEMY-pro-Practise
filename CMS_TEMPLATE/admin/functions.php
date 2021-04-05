@@ -123,7 +123,7 @@ function insertPosts()
     if(isset($_POST['create_post']))
 {
     $post_title=$_POST['post_title'];
-    $posts_category_id=$_POST['posts_category_id'];
+    $posts_category_id=$_POST['posts_category'];
     $post_author=$_POST['post_author'];
     $post_status=$_POST['post_status'];
 
